@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png"> <!-- J'ai voulu intégrer un émoticone dans l'onglet de ma page afin que les utilisateurs puissent voir le sigle de Cobra Kai-->
+    <link rel="stylesheet" href="css/main.css">
+    <title>Cobra Kai</title>
+  </head>
+  <!-- Cette première partie de mon code m'a permis de structurer mon document HTML avec des métadonnées en lien avec la compatibilité mobile et aussi d'ajouter un favicon visible lors de la navigation -->
+
+  <body>
+    <article class="accessibility-controls">
+      <h1>Options d'accessibilité</h1>
+
+      <!-- Zoom -->
+      <!-- Bouton de fermeture pour désactiver les options d'accessibilité -->
+      <button id="close-accessibility" class="close-btn">×</button>
+      <div class="accessibility-container">
+        <!-- Case à cocher masquée pour contrôler l'affichage -->
+        <input type="checkbox" id="close-options-checkbox" class="close-checkbox">
+
+        <!-- Contenu des options -->
+        <div class="accessibility-options">
+          <label for="zoom-range">Zoom sur le texte :</label> <!-- les boutons n'étaient pas affectés par l'option de zoom car difficile à paramétrer-->
+          <input type="range" id="zoom-range" min="0.5" max="3" step="0.1" value="1">
+          <span id="zoom-value">1x</span>
+        </div>
+      </div>
+
+      <label for="mode-normal">Mode d'affichage :</label>
+      <input type="radio" id="mode-normal" name="mode">
+      <label for="mode-normal">Normal</label>
+      <input type="radio" id="mode-grayscale" name="mode" value="grayscale">
+      <label for="mode-grayscale">Noir et Blanc</label>
+      <input type="radio" id="mode-daltonien" name="mode" value="daltonien">
+      <label for="mode-daltonien">Daltonien</label>
+      <div id="daltonien-options" style="display: none;">
+        <input type="radio" id="deuteranopie" name="daltonien" value="deuteranopie">
+        <label for="deuteranopie">Deuteranopie (vert-rouge)</label>
+
+        <input type="radio" id="protanopie" name="daltonien" value="protanopie">
+        <label for="protanopie">Protanopie (rouge-vert)</label>
+
+        <input type="radio" id="tritanopie" name="daltonien" value="tritanopie">
+        <label for="tritanopie">Tritanopie (bleu-jaune)</label>
+      </div>
+    </article>
+
+    <!-- Bouton Menu Mobile -->
+    <div class="menu-btn">
+      <i class="fa-solid fa-bars fa-2x"></i>
+    </div>
+    <!-- Fin du Bouton Menu Mobile -->
+
+    <!-- Je n'ai pas inséré de code JavaScript comportant une instruction, donc mon bouton est statique, il ne produit aucun effet -->
+
+    <!-- J’ai voulu créer un en-tête avec le sigle du dojo, une partie de présentation "showcase" avec un bouton d’appel à l’action qui reprend les couleurs du dojo -->
+    <header>
+      <article class="container">
+        <nav class="nav-container">
+          <div class="header-logo">
+            <img src="assets/images/cobra-kai-logo.png" alt="Dojo Cobra Kai">
+          </div>
+          <ul class="nav-menu" id="md">
+            <!-- Menu déroulant -->
+            <li>
+              <a href="#">Accueil</a>
+              <ul>
+                <li><a href="#our-code">Nos meilleurs élèves</a></li>
+                <li><a href="#cta">Nous rejoindre</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="showcase-content-container">
+          <div class="showcase-text">
+            <h2>Rejoins Cobra Kai !</h2>
+            <p>
+              Si tu en as marre d'être un nerd, tu devrais absolument rejoindre le dojo Cobra Kai. Nous t'apprendrons à devenir un dur à cuire et à ne pas te laisser marcher sur les pieds. C'est ta chance d'apprendre à te battre et de gagner le respect.
+            </p>
+            <button class="showcase-btn" type="button">Inscris-toi !</button>
+          </div>
+          <div class="showcase-img">
+            <img src="assets/images/ck_s4_johnny_lawrence.webp" alt="Johnny Lawrence">
+          </div>
+        </div>
+      </article>
+    </header>
+
+    <!-- Selon moi, je trouve que j'ai plutôt bien réussi la séparation de l'image du sensei Lawrence avec le texte -->
+
+    <!-- J’ai réussi à redimensionner les images afin qu’elles fassent chacune la même taille, néanmoins je m'attendais à un rendu différent pour l'option de défilement automatique des personnages, je n'ai pas pu trouver de solutions afin de rendre invisible les flèches de défilement -->
+    <section class="container">
+      <div id="our-code">
+        <h2>Nos meilleurs étudiants</h2>
+        <div class="red-line"></div>
+        <div class="code-slider"></div>
+        <div class="code-cards-container">
+          <div class="code-card">
+            <div class="code-img">
+              <img src="assets/images/ck_s4_miguel_diaz.jpg" alt="Miguel Diaz">
+            </div>
+            <h3>MIGUEL DIAZ</h3>
+            <p>
+              Vainqueur du tournoi All Valley 2018 🏆
+            </p>
+          </div>
+          <div class="code-card">
+            <div class="code-img">
+              <img src="assets/images/ck_s4_hawk.jpg" alt="Eli Moskowitcz">
+            </div>
+            <h3>L'AIGLE</h3>
+            <p>
+              Vainqueur du tournoi masculin All Valley 2019 🏆
+            </p>
+          </div>
+          <div class="code-card">
+            <div class="code-img">
+              <img src="assets/images/ck_s4_tory_nichols.png" alt="Tory Nichols">
+            </div>
+            <h3>TORY NICHOLS</h3>
+            <p>
+              Vainqueur du tournoi féminin All Valley 2019 🏆<br> 
+              Capitaine du Sekai Taikai 2020 🪙
+            </p>
+          </div>
+          <div class="code-card">
+            <div class="code-img">
+              <img src="assets/images/CK_Robby_Keene_Infobox.jpg" alt="Robby Keene">
+            </div>
+            <h3>ROBBY KEENE</h3>
+            <p>
+              Finaliste du tournoi All Valley 2018 🥈<br> 
+              Finaliste du tournoi All Valley 2019 🥈
+            </p>
+          </div>
+        </div>
+        <!-- Je regrette de ne pas avoir pu intégrer une option de défilement des personnages davantage interactive (ex : défilement horizontal), cela fait que mes cartes sont statiques et défilent automatiquement -->
+      </div>
+    </section>
+
+    <!-- J’ai ajouté cette citation du personnage de John Kreese accompagnée de son image, je regrette néanmoins encore une fois de ne pas avoir pu créer un effet de défilement pour inclure davantage de citations -->
+    <div class="special-message">
+      <div class="container">
+        <div class="message-content-container">
+          <div class="message-text">
+            <blockquote class="kreese-quote">
+              Quand l'un de vous agit, vous agissez tous. Vous vivez et mourez avec les conséquences et les récompenses, parce que vous êtes tous Cobra Kai. La guerre ne s'arrête jamais. <br><br>
+              - John Kreese, fondateur de Cobra Kai
+            </blockquote>
+          </div>
+          <div class="message-image">
+            <img src="assets/images/ck_s4_john_kreese.webp" alt="John Kreese">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cette article est un nouvel appel à l’action qui utilise des couleurs vives afin de susciter davantage l’attention -->
+    <article class="container">
+      <h3 class="hidden-title" aria-hidden="true">Titre masqué</h3> <!-- J'ai fait le choix de masquer ce titre pour des raisons esthétiques, et car le fait de ne pas en mettre invalide mon code html-->
+      <section id="cta">
+        <div class="cta-container">
+          <div class="cta-text">
+            <h3>C'est le moment de changer !</h3>
+            <p>
+              Apprends la discipline, maîtrise le combat, ne montre aucune pitié ! Deviens un Cobra Kai dès aujourd'hui !
+            </p>
+          </div>
+          <div class="cta-btn">
+            <button type="button">Nous rejoindre</button>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <!-- Ce pied de page simple comporte le logo de Cobra Kai ainsi que la mention copyright -->
+    <footer>
+      <div class="footer-img">
+        <img src="assets/images/cobra-kai-logo.png" alt="Cobra Kai Logo">
+      </div>
+      <div class="footer-text">
+        <p>Copyright &copy; Cobra Kai 2024 - Amir EL HADRI</p>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script> <!-- Cette attribut permet de charger mon fichier Javascript, je l'ai placé à la fin pour que le rendu de ma page HTML ne soit pas bloqué -->
+  </body>
+</html>
+
+<!-- Mes échecs : je n'ai pas réussit à adapter mon texte et mes images à tout les niveaux de zoom, cela m'a demandé beaucoup de temps et aussi une complexité dans mon code + les boutons et images étaient insensibles au zoom + -->
+ <!-- Mes réussites : mon code passe le validateur HTML, ce qui signifie que mes données sont correctement structurées + il comporte une navigation et exploite plusieurs notions vus en cours (anchor par exemple) -->
