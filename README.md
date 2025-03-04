@@ -23,22 +23,29 @@ J'ai intégré au sein des différents codes que j'ai écrit (cf. index.html, ma
 ## Arborescence 
 
 projetELHADRI/
-├── index.html
-├── script.js
-├── assets/
-│   ├── images/
-│   │   └── CK_Robby_Keene_Infobox.jpg
-│   │   └── ck_s4_tory_nichols.png
-│   │   └── cobra-kai-logo.png
-│   │   └── favicon-32x32.png
-│   │   └── ck_s4_hawk.jpg
-│   │   └── ck_s4_johnny_lawrence.webp
-│   │   └── ck_s4_john_kreese.webp
-│   │   └── ck_s4_miguel_diaz.jpg
-├── css/
-│   ├── main.css
-└── README.md
 
+⚫ index.html
+
+⚫ script.js
+
+⚫ README.md
+
+assets/
+
+  ⚫ images/
+
+          ⚫ CK_Robby_Keene_Infobox.jpg
+          ⚫ ck_s4_tory_nichols.png
+          ⚫ cobra-kai-logo.png
+          ⚫ favicon-32x32.png
+          ⚫ ck_s4_hawk.jpg
+          ⚫ ck_s4_johnny_lawrence.webp
+          ⚫ ck_s4_john_kreese.webp
+          ⚫ ck_s4_miguel_diaz.jpg
+
+  ⚫ css/
+
+          ⚫ main.css
 
 
 ## Bibliographie
