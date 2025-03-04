@@ -55,3 +55,5 @@ Pour enrichir mon projet, j'ai consulté les ressources suivantes :
 - Dave Ceddia sur les références en JavaScript : [Un guide visuel des références en JavaScript](https://la-cascade.io/articles/un-guide-visuel-des-references-en-javascript)
 - Rachel Cope sur les animations CSS : [CSS animation, une introduction](https://la-cascade.io/articles/css-animation-une-introduction) 
 - Stéphanie Walter sur l'accessibilité et les couleurs : [Accessibilité et couleurs](https://stephaniewalter.design/fr/blog/accessibilite-et-couleurs-outils-et-ressources-pour-concevoir-des-produits-accessible/)
+
+
