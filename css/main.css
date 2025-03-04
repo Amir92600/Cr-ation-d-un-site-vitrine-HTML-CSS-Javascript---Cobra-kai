@@ -1,0 +1,448 @@
+/* Style général pour l'ensemble de la page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+  font-size: 1rem; /* Taille de texte par défaut */
+  line-height: 1.6;
+}
+
+/* Conteneur des options d'accessibilité */
+.accessibility-container {
+  position: relative;
+  width: auto;
+}
+
+/* Bouton de fermeture des options d'accessibilité */
+#close-accessibility {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #fff;
+  background: #d9534f;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#close-accessibility:hover {
+  background: #c9302c;
+}
+
+/* Case à cocher masquée */
+.close-checkbox {
+  display: none;
+}
+
+/* Contenu des options */
+.accessibility-options {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  margin: 20px;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.close-checkbox:checked ~ .accessibility-options {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Zoom : normal */
+#zoom-range {
+  width: 100%;
+  margin: 10px 0;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+#zoom-range::-webkit-slider-thumb,
+#zoom-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #4CAF50;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Mode d'affichage : normal (par défaut) */
+.normal-mode {
+  filter: none;
+}
+
+/* Mode noir et blanc */
+.grayscale-mode {
+  filter: grayscale(100%) !important;
+}
+
+/* Mode deuteranopie (daltonisme vert-rouge) */
+.daltonien-deuteranopie {
+  filter: contrast(120%) grayscale(80%) brightness(95%) sepia(20%) hue-rotate(-50deg);
+}
+
+/* Mode protanopie (daltonisme rouge-vert) */
+.daltonien-protanopie {
+  filter: contrast(120%) grayscale(80%) brightness(95%) sepia(20%) hue-rotate(-70deg);
+}
+
+/* Mode tritanopie (daltonisme bleu-jaune) */
+.daltonien-tritanopie {
+  filter: contrast(120%) grayscale(80%) brightness(95%) sepia(20%) hue-rotate(180deg);
+}
+
+/* Style des boutons radio et labels */
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+label {
+  margin-right: 20px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Menu Button */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.menu-btn i {
+  color: #333;
+}
+
+/* Header + Navigation */
+header {
+  background: #000;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo img {
+  max-width: 150px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-menu li {
+  text-transform: uppercase;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Déclaration des variables de couleur */
+:root {
+  --menu-background: transparent;
+  --hover-background: rgba(0, 0, 0, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.25);
+  --submenu-background: transparent;
+  --submenu-hover: rgba(0, 0, 0, 0.1);
+}
+
+#md {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  width: 180px;
+}
+
+#md li {
+  background-color: var(--menu-background);
+  box-shadow: 3px 3px 3px var(--shadow-color);
+}
+
+#md li li {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+  background: var(--submenu-background);
+}
+
+#md a {
+  display: block;
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 8px 0;
+}
+
+#md li li:hover {
+  background-color: var(--submenu-hover);
+}
+
+#md li:hover li {
+  max-height: 100%;
+}
+
+#md li:hover {
+  background-color: var(--hover-background);
+}
+
+#md li a:hover {
+  background-color: var(--hover-background);
+  color: white;
+}
+
+.mobile-menu-logo {
+  display: none;
+}
+
+/* Première partie principale de la page */
+.showcase-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.showcase-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.showcase-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.showcase-btn {
+  background: #f0cf31;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.showcase-btn:hover {
+  background: #ff0000;
+  color: #fff;
+}
+
+.showcase-img img {
+  max-width: 400px;
+  border-radius: 10px;
+  margin-left: 100px;
+}
+
+/* Our Code */
+#our-code {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.red-line {
+  width: 60px;
+  height: 4px;
+  background: #ff0000;
+  margin: 20px auto;
+}
+
+/* Conteneur du défilement horizontal */
+.code-cards-container {
+  display: flex;
+  overflow-x: hidden; /* Masque la barre de défilement horizontale */
+  overflow-y: hidden; /* Masque la barre de défilement verticale */
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+  animation: scrollHorizontal 40s linear infinite; /* Animation de défilement ralentie */
+}
+
+/* Animation de défilement horizontal */
+@keyframes scrollHorizontal {
+  0% {
+    transform: translateX(0); /* Position initiale */
+  }
+  100% {
+    transform: translateX(-100%); /* Défilement à gauche */
+  }
+}
+
+.code-card {
+  min-width: 250px;
+  flex-shrink: 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s ease;
+}
+
+.code-card:hover {
+  transform: scale(1.05);
+}
+
+/* Arrête l'animation au survol de n'importe quelle carte */
+.code-cards-container:hover {
+  animation-play-state: paused; /* Met l'animation en pause */
+}
+
+/* Masquer le h3 entre la citation de John Kresse et la partie des étudiants*/
+.hidden-title {
+  display: none;
+}
+
+/* Message spécial du fondateur de Cobra Kai */
+#special-message {
+  background-color: #fff;
+  color: #222;
+  padding: 40px 0;
+}
+
+.message-content-container {
+  background-color: #222;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-text {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+}
+
+.kreese-quote {
+  font-style: italic;
+  margin: 0;
+  background-color: #f0cf31;
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.message-image img {
+  max-width: 300px;
+  border-radius: 30px;
+  margin-left: 50px;
+}
+
+/* Call-to-Action "Nous rejoindre" */
+#cta {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.cta-container {
+  background: #ff0000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn button {
+  background: #fff;
+  color: #ff0000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cta-btn button:hover {
+  background: #f4f4f4;
+}
+
+/* Pied de page */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-text p {
+  margin: 0;
+}
+
+.footer-img img {
+  max-width: 100px;
+  margin-top: 10px;
+}
+
+/* ===================================================
+             Passage du site en mode responsive
+   =================================================== */
+
+/* Cette partie suivante est destinée à rendre le site responsive pour les écrans de petites tailles (smartphone, etc.) */
+
+/* Menu : affichage en colonne pour les petits écrans */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .showcase-content-container {
+    flex-direction: column;
+  }
+
+  .showcase-img {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .code-cards-container {
+    flex-direction: column;
+    gap: 20px;
+    animation: none; /* Désactive l'animation pour les petits écrans */
+  }
+}
+
+/* Mes échecs : Je n'ai pas réussit à créer un effet de défilement qui répondait à mes objectifs */
+/* Mes réussites : Mon code respecte la syntaxe CSS et passe au validateur sans aucune erreur +  
+j'ai appliqué les différents concepts vu en cours (héritage, cascade, box model, positionnement, transition, animation) mais aussi des fonctionnalités responsive et aussi des effets de filtres et notions en lien avec la gestion de l'opacité et de la visibilité + */
