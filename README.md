@@ -13,7 +13,7 @@ La conception de ce site vitrine présente la philosophie du dojo, met en avant 
    - Cette approche est plutôt tendance depuis ces dernières années parmi les développeurs web et se révèle efficace pour ce type de contenu. 
 
 2. Accessibilité 
-   - J'ai veillé à rendre le site accessible à tous, en intégrant des options d'accessibilité pour les personnes en situation d'handicap (daltonisme, mal voyant, sensibilité aux couleurs, etc.). 
+   - J'ai veillé à rendre le site accessible à tous, en intégrant des options d'accessibilité pour les personnes en situation d'handicap (daltonisme, Atkinson hyperlegible, open dyslexic, mal voyant, sensibilité aux couleurs, etc.). 
    - Ce fut pour moi un défi enrichissant que d'aller plus loin que les séances de cours, en apprenant à programmer sous javascript, bien que cela n'était pas attendu. 
 
 ## Commentaires dans le code
