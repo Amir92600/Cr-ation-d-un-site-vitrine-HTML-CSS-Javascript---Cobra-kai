@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png"> <!-- J'ai voulu intégrer un émoticone dans l'onglet de ma page afin que les utilisateurs puissent voir le sigle de Cobra Kai-->
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic/open-dyslexic.css">
+
     <title>Cobra Kai</title>
   </head>
   <!-- Cette première partie de mon code m'a permis de structurer mon document HTML avec des métadonnées en lien avec la compatibilité mobile et aussi d'ajouter un favicon visible lors de la navigation -->
@@ -26,6 +29,12 @@
           <label for="zoom-range">Zoom sur le texte :</label> <!-- les boutons n'étaient pas affectés par l'option de zoom car difficile à paramétrer-->
           <input type="range" id="zoom-range" min="0.5" max="3" step="0.1" value="1">
           <span id="zoom-value">1x</span>
+          <label for="font-select">Police de caractère :</label>
+          <select id="font-select" aria-label="Choisir une police d’écriture">
+          <option value="default">Standard</option>
+          <option value="atkinson">Atkinson Hyperlegible</option>
+          <option value="dyslexic">OpenDyslexic</option>
+          </select>
         </div>
       </div>
 
