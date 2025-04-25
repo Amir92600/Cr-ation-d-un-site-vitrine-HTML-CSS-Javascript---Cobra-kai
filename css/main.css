@@ -104,6 +104,14 @@ body {
   filter: contrast(120%) grayscale(80%) brightness(95%) sepia(20%) hue-rotate(180deg);
 }
 
+.font-atkinson {
+  font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
+}
+
+.font-dyslexic {
+  font-family: 'OpenDyslexic', Arial, sans-serif;
+}
+
 /* Style des boutons radio et labels */
 input[type="radio"] {
   margin-right: 10px;
