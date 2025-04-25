@@ -113,5 +113,15 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+document.getElementById('font-select').addEventListener('change', function () {
+  const selectedFont = this.value;
+  document.body.classList.remove('font-atkinson', 'font-dyslexic');
+  if (selectedFont === 'atkinson') {
+    document.body.classList.add('font-atkinson');
+  } else if (selectedFont === 'dyslexic') {
+    document.body.classList.add('font-dyslexic');
+  }
+});
+
 // Mes réussites : bien que cela n'était pas attendu dans la consigne, j'ai réalisé un script Javascript afin d'appliquer les différentes options d'accessibilité que j'avais établi dans mes codes CSS et HTML, je trouve que le résultat est plutôt bluffant, ce script fonctionne bien
 // Mes échecs : en inspectant le code de ma page, je tombe sur l'erreur suivante que je ne comprends pas " Uncaught TypeError: Cannot read properties of null (reading 'addEventListener') at HTMLDocument.<anonymous> (script.js:110:15)"  
